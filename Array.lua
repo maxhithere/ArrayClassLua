@@ -118,8 +118,8 @@ function Array:rotate(n)
   local rotated = {}
   local len = #self.values
   for i = 1, len do
-    local new_index = (i + n - 1) % len + 1
-    rotated[new_index] = self.values[i]
+    local newIndex = (i + n - 1) % len + 1
+    rotated[newIndex] = self.values[i]
   end
   self.values = rotated
 end
@@ -146,5 +146,12 @@ function Array:fill(value, start, finish)
   finish = finish or #self.values
   for i = start, finish do
     self.values[i] = value
+  end
+end
+
+function Array:shuffle()
+  for i = #self.values, 2, -1 do
+    local j = math.random(i)
+    self.values[i], self.values[j] = self.values[j], self.values[i]
   end
 end
