@@ -30,4 +30,12 @@ an optimized array class for lua with many methods
   - <Array>:unshift(value) - adds an element to the beginning of the array
   - <Array>:values() - returns an array of the values of the elements
   - <Array>:fill(value, start, finish) - fills the elements of the array
-  - <Array>:shuffle() - intermix elements in the array in place
+  - <Array>:every(fn) - tests whether elements pass the condition implemented
+  - <Array>:flat(depth) - new array with all sub-array elements concatenated
+  - <Array>:flatMap(fn) - new array by applying function to each element then flattening
+  - <Array>:last() - returns the last element of the array
+  - <Array>:first() - returns the first element of the array
+  - <Array>:toString(seperator) - returns a string representing the array and its elements
+  - <Array>:unique() - returns a new array with all the duplicate elements removed
+  - <Array>:splice(start, deleteCount, ...items) - removing elements from or inserting elements into an array at a specified position
+  
